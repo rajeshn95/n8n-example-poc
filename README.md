@@ -24,7 +24,7 @@
 - To run the custom script in the puppeteer node:
 
 ```
-// Navigate to an IP lookup service
+// Navigate to page
 await $page.goto('{{ $('Start').item.json.base_url }}/approval?requestId={{ $('Create Request').item.json.request.id }}&token={{ $('Login').item.json.token }}');
 
 // Step 2: Wait for the "Approve" button using its ID
