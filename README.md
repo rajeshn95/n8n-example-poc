@@ -267,3 +267,9 @@ Complete example workflow:
   }
 }
 ```
+
+### Screenshot Example
+
+![Approval Flow Screenshot](screenshot.png)
+
+---
