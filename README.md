@@ -11,6 +11,7 @@
 
 - https://www.npmjs.com/package/n8n-nodes-puppeteer
 - Clone the repository: `git clone git@github.com:drudge/n8n-nodes-puppeteer.git`
+  > (Moved docker file directly to this repo, we dont have to clone this.)
 - build the docker image: `docker build -t n8n-puppeteer -f docker/Dockerfile docker/`
 - run the docker image:
   ```
