@@ -1,5 +1,7 @@
 ### Run n8n using docker with puppeteer:
 
+- Install the docker desktop
+- Open the docker desktop
 - build the docker image: `docker build -t n8n-puppeteer -f docker/Dockerfile docker/`
 - run the docker image:
   ```

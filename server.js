@@ -1,3 +1,4 @@
+// This is just an example do not need to run this server
 // server.js
 const express = require("express");
 const jwt = require("jsonwebtoken");
