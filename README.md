@@ -10,6 +10,9 @@
       -v ~/.n8n:/home/node/.n8n \
       n8n-puppeteer
   ```
+- Open the given URL:`http://localhost:5678`
+- Setup email/password
+- Start creating workflow
 - While working with the puppeteer node make sure to add the following option:
 
   - enable: `Add Container Arguments`
