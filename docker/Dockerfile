@@ -26,6 +26,14 @@ RUN mkdir -p /opt/n8n-custom-nodes && \
     npm install n8n-nodes-puppeteer && \
     chown -R node:node /opt/n8n-custom-nodes
 
+# Install ajv into the path expected by n8n Code node
+USER node
+RUN mkdir -p /home/node/.n8n/code && \
+    cd /home/node/.n8n/code && \
+    npm install ajv
+
+USER root
+
 # Copy our custom entrypoint
 COPY docker-custom-entrypoint.sh /docker-custom-entrypoint.sh
 RUN chmod +x /docker-custom-entrypoint.sh && \

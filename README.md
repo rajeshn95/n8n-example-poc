@@ -114,3 +114,38 @@ return [
   },
 ];
 ```
+
+# How to validate JSON schema:
+
+```
+const Ajv = require('ajv');
+const ajv = new Ajv();
+
+const schema = {
+  type: "object",
+  properties: {
+    id: { type: "number" },
+    mandate_ref: { type: "string" },
+  },
+  required: ["id", "mandate_ref"]
+};
+
+// Get the first item from the Create Mandate node output
+const input = $('Create Mandate').first().json;
+
+// Validate input
+const valid = ajv.validate(schema, input);
+
+if (!valid) {
+  throw new Error(`❌ Schema validation failed: ${ajv.errorsText(ajv.errors)}`);
+}
+
+return {
+  json: {
+    validated: true,
+    message: "✅ Schema valid",
+    data: input
+  }
+};
+
+```

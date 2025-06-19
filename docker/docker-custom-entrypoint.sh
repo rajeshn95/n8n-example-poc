@@ -25,6 +25,8 @@ print_banner() {
     fi
 
     echo "Puppeteer executable path: $PUPPETEER_EXECUTABLE_PATH"
+    echo "NODE_PATH: $NODE_PATH"
+    echo "NODE_FUNCTION_ALLOW_EXTERNAL: $NODE_FUNCTION_ALLOW_EXTERNAL"
     echo "----------------------------------------"
 }
 
@@ -34,6 +36,9 @@ if [ -n "$N8N_CUSTOM_EXTENSIONS" ]; then
 else
     export N8N_CUSTOM_EXTENSIONS="/opt/n8n-custom-nodes"
 fi
+
+export NODE_FUNCTION_ALLOW_EXTERNAL="ajv"
+export NODE_PATH="/home/node/.n8n/code/node_modules"
 
 print_banner
 
