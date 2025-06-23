@@ -117,9 +117,13 @@ return [
 
 # How to validate JSON schema:
 
+- https://ajv.js.org/packages/ajv-formats.html
+
 ```
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const ajv = new Ajv();
+addFormats(ajv);
 
 const schema = {
   type: "object",
