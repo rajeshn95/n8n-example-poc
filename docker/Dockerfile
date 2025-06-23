@@ -30,7 +30,7 @@ RUN mkdir -p /opt/n8n-custom-nodes && \
 USER node
 RUN mkdir -p /home/node/.n8n/code && \
     cd /home/node/.n8n/code && \
-    npm install ajv
+    npm install ajv ajv-formats
 
 USER root
 
